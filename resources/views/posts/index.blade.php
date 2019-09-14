@@ -10,8 +10,8 @@
                     <img style="width: 100%;" src="/storage/cover_images/{{$post->cover_image}}" alt="cover_image_by_{{$post->user->name}}">
                     </div>
                     <div class="col-md-8 col-sm-8">
-                        <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
-                        <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
+                        <h4><a href="/posts/{{$post->id}}">{{$post->title}}</a></h4>
+                        <small>Written on {{$post->created_at->format('d-m-Y')}} by {{$post->user->name}}</small>
                     </div>
                 </div>
             </div>

@@ -4,9 +4,13 @@
     <div class="jumbotron text-center">
         <h1>{{$title}}</h1>
         <p>This is blogapp created using Laravel.</p>
-        <p>
-            <a class="btn btn-primary btn-lg" href="/login" role="button">Login</a>
-            <a class="btn btn-success btn-lg" href="/register" role="button">Register</a>
-        </p>
+        @guest
+            @if (Route::has('register'))
+                <p>
+                    <a class="btn btn-primary btn-lg" href="/login" role="button">Login</a>
+                    <a class="btn btn-success btn-lg" href="/register" role="button">Register</a>
+                </p>
+            @endif
+        @endguest
     </div>
 @endsection

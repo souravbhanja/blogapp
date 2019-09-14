@@ -31,6 +31,7 @@ Route::get('/services', 'PagesController@services');
 
 Route::resource('posts', 'PostsController');
 
+//Generates routes for all user authentication
 Auth:: routes();
 
 Route::get('/dashboard', 'DashboardController@index');
